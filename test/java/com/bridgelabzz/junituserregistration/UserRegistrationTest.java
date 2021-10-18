@@ -145,4 +145,19 @@ public class UserRegistrationTest {
 		Assert.assertFalse(result);
 	}
 
+	/**
+	 * Unit test for validating mood of the User
+	 */
+
+	@Test
+	public void givenMessageWhenHappyShouldReturnEntrySuccessful() {
+		String result = MoodAnalyser.analyseMood("User is Happy");
+		Assert.assertEquals("Entry Successful", result);
+	}
+
+	@Test
+	public void givenEmail2WhenNotProperShouldReturnEntryFailed() {
+		String result = MoodAnalyser.analyseMood("User is Sad");
+		Assert.assertEquals("Entry Failed", result);
+	}
 }
