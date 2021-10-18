@@ -12,6 +12,9 @@ import java.util.regex.Pattern;
  */
 
 public class UserRegistration {
+	/**
+	 * Created a method to validate first name
+	 */
 	public boolean firstName(String firstName) {
 		String regex = "^[A-Z]{1}[a-z]{2,}$";
 		Pattern pattern = Pattern.compile(regex);
@@ -19,4 +22,13 @@ public class UserRegistration {
 		return matcher.matches();
 	}
 
+	/**
+	 * Created a method to validate last name
+	 */
+	public boolean lastName(String lastName) {
+		String regex = "^[A-Z]{1}[a-z]{2,}$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(lastName);
+		return matcher.matches();
+	}
 }
