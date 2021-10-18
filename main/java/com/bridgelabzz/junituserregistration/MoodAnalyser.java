@@ -1,5 +1,5 @@
 package com.bridgelabzz.junituserregistration;
-
+//
 public class MoodAnalyser {
 	public static String analyseMood(String mood) {
 		if (mood.toLowerCase().contains("happy")) {
